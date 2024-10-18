@@ -6,7 +6,7 @@ const app = express()
 
 dotenv.config()
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const API_KEY = process.env.API_KEY
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather'
 const bot = new Telegraf(process.env.BOT_TOKEN)
