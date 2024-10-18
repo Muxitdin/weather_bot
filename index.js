@@ -42,6 +42,11 @@ bot.command('weather', async (ctx) => {
   }
 })
 
+
+
+bot.launch()
+
+
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`)
 })
