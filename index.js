@@ -10,8 +10,11 @@ const PORT = 3000
 const API_KEY = process.env.API_KEY
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather'
 const bot = new Telegraf(process.env.BOT_TOKEN)
+const WEBHOOK_URL = process.env.SERVER_URL
 
+bot.telegram.setWebhook(`${WEBHOOK_URL}/bot${process.env.BOT_TOKEN}`);
 
+app.use(bot.webhookCallback(`/bot${process.env.BOT_TOKEN}`));
 
 bot.start((ctx) => {
   ctx.reply(`Привет, ${ctx.from.first_name}!👋 \nДобро пожаловать в нашего бота! Я могу предоставить вам актуальную информацию о погоде.\nВведите:   /weather  [название города ]`)
