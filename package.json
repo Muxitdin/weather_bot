@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
@@ -16,5 +17,8 @@
     "express": "^4.21.1",
     "nodemon": "^3.1.7",
     "telegraf": "^4.16.3"
+  },
+  "engines": {
+    "node": "22.8.0"
   }
 }
